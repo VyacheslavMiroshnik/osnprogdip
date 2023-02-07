@@ -1,23 +1,28 @@
 let players = ['x', 'o'];
 let activePlayer = 0;
+  let sizeBoard = 3;
 let board = [];
 
 function startGame() {
-     board = [
-        ['', '', ''],
-        ['', '', ''],
-        ['', '', '']
-      ];
+  board=[];
+ for (let i = 0 ; i < sizeBoard  ; i++){
+   board.push([]);
+   for (let k = 0; k < sizeBoard ; k++){
+     board[i].push('');
+   };
+ };
+  
+  
  
   renderBoard(board);
-  activePlayer = 0;
+  activePlayer=0;
 };
 
 function click(row, column) {
 
   board[row][column] = players[activePlayer];
   renderBoard(board);
-  steps++;
+  //steps++;
   checkWinner(board, column, row);
 }
 
