@@ -2,7 +2,7 @@ let players = ['x', 'o'];
 let activePlayer = 0;
 let board = [];
 
-function startGame() 
+function startGame() {
      board = [
         ['', '', ''],
         ['', '', ''],
